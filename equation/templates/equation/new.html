@@ -1,0 +1,9 @@
+<p>Введите коэффициенты квадратного уравнения</p>
+<form action="/equation/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="OK">
+    {% if form.is_valid %}
+    <p>у уравнения {{ result }}</p>
+    {% endif %}
+</form>

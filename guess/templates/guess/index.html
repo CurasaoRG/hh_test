@@ -1,0 +1,10 @@
+<p>Введите номер предмета</p>
+<form action="/guess/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="OK">
+    {% if form.is_valid %}
+    <p>попробуем угадать: предмет {{ guess }}</p>
+    <p> {{ result }} </p>
+    {% endif %}
+</form>
